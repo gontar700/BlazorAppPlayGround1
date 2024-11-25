@@ -1,0 +1,14 @@
+﻿@inject PersonService PersonService
+
+@page "/success"
+<h3>Success</h3>
+
+@if (PersonService.person != null)
+{
+    <p>First Name: @PersonService.person.FirstName</p>
+    <p>Last Name: @PersonService.person.LastName</p>
+}
+else
+{
+    <p>No person details available.</p>
+}
